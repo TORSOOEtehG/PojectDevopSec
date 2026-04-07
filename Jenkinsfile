@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    stages {
-        stage('Clonage') {
-            steps {
-                git 'https://github.com/TORSOOEtehG/PojectDevopSec.git'
-            }
+    stage('Clonage') {
+    steps {
+        git branch: 'main', url: 'https://github.com/TORSOOEtehG/PojectDevopSec.git'
+    }
+          }
         }
         stage('Build + Tests + Sécurité') {
             steps {
